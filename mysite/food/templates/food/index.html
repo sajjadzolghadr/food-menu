@@ -8,12 +8,19 @@
 <body>
     {% block body %}
     {% for item in items %}
-    <ul>
-        <li>
-            <a href="{% url 'food:detail' item.id %}">{{ item.id }} -- {{ item.name }}</a>
-        </li>
-    </ul>
-        {% endfor %}
+    <div class="row align-items-center mb-3">
+    <div class="col-md-3 offset-md-2">
+        <img src="{{ item.image }}" class="img-fluid rounded" alt="{{ item.name }}">
+    </div>
+
+    <div class="col-md-4">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <h5>${{ item.price }}</h5>
+    </div>
+</div>
+  
+    {% endfor %}
     {% endblock %}
 </body>
 </html>

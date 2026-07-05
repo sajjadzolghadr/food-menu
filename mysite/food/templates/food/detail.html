@@ -1,15 +1,30 @@
-{% extends 'food/base.html'%}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detail</title>
-</head>
-<body>
-    {% block body %}
-    <h1>{{item.name}}</h1>
-    <h2>{{item.description}}</h2>
-    <h3>{{item.price}}</h3>
-    {% endblock %}
-</body>
-</html>
+{% extends 'food/base.html' %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <div class="row">
+
+        <div class="col-md-5">
+            <img src="{{ item.image }}" class="img-fluid rounded shadow" alt="{{ item.name }}">
+        </div>
+
+        <div class="col-md-7">
+            <h1>{{ item.name }}</h1>
+            <hr>
+
+            <h4 class="text-muted">{{ item.description }}</h4>
+
+            <h3 class="text-dark mt-4">
+                ${{ item.price }}
+            </h3>
+
+            <a href="/food/" class="btn btn-secondary mt-3">
+                Back
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

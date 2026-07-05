@@ -18,6 +18,11 @@
         <p>{{ item.description }}</p>
         <h5>${{ item.price }}</h5>
     </div>
+    <div class="col-md-2 d-flex align-items-center">
+        <a href="{% url 'food:detail' item.id %}" class="btn btn-success">
+         Details
+        </a>
+    </div>
 </div>
   
     {% endfor %}

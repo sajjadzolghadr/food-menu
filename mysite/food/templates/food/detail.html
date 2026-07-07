@@ -19,6 +19,14 @@
                 ${{ item.price }}
             </h3>
 
+            <a href="{% url 'food:update_item' item.id %}" class="btn btn-warning mt-3">
+                 Update
+            </a>
+
+            <a href="{% url 'food:delete_item' item.id %}" class="btn btn-danger mt-3">
+               Delete
+            </a>
+
             <a href="/food/" class="btn btn-secondary mt-3">
                 Back
             </a>

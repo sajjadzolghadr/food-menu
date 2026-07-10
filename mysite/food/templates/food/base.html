@@ -39,9 +39,9 @@
     {% if user.is_authenticated %}
 
         <li class="nav-item">
-            <span class="nav-link text-white">
-                Hello, {{ user.username }}
-            </span>
+            <a class="btn btn-outline-light me-2" href="{% url 'profile' %}">
+                Profile
+            </a>
         </li>
 
         <li class="nav-item">

@@ -4,7 +4,7 @@ from .models import Item
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
-        fields = '__all__'
+        fields = ['name','price','description','image']
 
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
